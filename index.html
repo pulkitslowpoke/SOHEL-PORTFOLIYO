@@ -1,0 +1,1485 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sohel Khan | B.Tech CSE Core • Future Software Engineer</title>
+  <meta name="description" content="Personal portfolio of Sohel Khan, a B.Tech Computer Science Engineering (CSE Core) student at JECRC University. Ninja-themed, modern, and professional software engineer portfolio." />
+  <meta name="author" content="Sohel Khan" />
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:title" content="Sohel Khan | Portfolio" />
+  <meta property="og:description" content="Believe it. Work for it. Achieve it. B.Tech CSE Core Student at JECRC University." />
+  <meta property="og:type" content="website" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            chakra: {
+              orange: '#ff6b00',
+              gold: '#ffaa00',
+              crimson: '#ff2a2a',
+              cyan: '#00d2ff',
+              dark: '#05070e',
+              navy: '#0a0f1d',
+              card: '#0d1424'
+            }
+          },
+          fontFamily: {
+            ninja: ['Cinzel', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            kanji: ['"Noto Serif JP"', 'serif'],
+            mono: ['"JetBrains Mono"', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Favicon SVG (Leaf Village Spiral Inspired) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='46' fill='%2305070e' stroke='%23ff6b00' stroke-width='4'/%3E%3Cpath d='M50 20 C65 20 78 32 78 48 C78 64 64 78 48 78 C35 78 25 68 25 55 C25 44 33 36 43 36 C51 36 57 42 57 50 C57 55 53 59 48 59 C45 59 43 57 43 54' fill='none' stroke='%23ffaa00' stroke-width='6' stroke-linecap='round'/%3E%3Cpolygon points='75,32 88,26 80,40' fill='%23ff2a2a'/%3E%3C/svg%3E" />
+</head>
+<body class="bg-[#05070e] text-slate-100 antialiased selection:bg-orange-500 selection:text-white japanese-pattern-bg">
+
+  <!-- Interactive Chakra Canvas Particle Background -->
+  <canvas id="chakra-canvas"></canvas>
+
+  <div class="ninja-content flex flex-col min-h-screen">
+
+    <!-- ======================================================== -->
+    <!-- NAVIGATION BAR -->
+    <!-- ======================================================== -->
+    <header class="sticky top-0 z-50 nav-glass transition-all duration-300">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-20">
+          
+          <!-- Logo & Village Crest -->
+          <a href="#hero" class="flex items-center gap-3 group focus:outline-none" aria-label="Sohel Khan Home">
+            <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-orange-500/20 via-red-500/10 to-transparent border border-orange-500/40 flex items-center justify-center p-2 group-hover:border-orange-500 group-hover:shadow-[0_0_20px_rgba(255,107,0,0.4)] transition-all">
+              <!-- Custom Leaf Spiral Crest -->
+              <svg viewBox="0 0 100 100" class="w-full h-full spiral-glow" fill="none">
+                <path d="M50 20 C65 20 78 32 78 48 C78 64 64 78 48 78 C35 78 25 68 25 55 C25 44 33 36 43 36 C51 36 57 42 57 50 C57 55 53 59 48 59" stroke="#ffaa00" stroke-width="8" stroke-linecap="round"/>
+                <polygon points="75,30 90,24 81,41" fill="#ff2a2a"/>
+              </svg>
+            </div>
+            <div>
+              <div class="flex items-center gap-2">
+                <span class="font-ninja text-lg sm:text-xl font-bold tracking-wider text-white group-hover:text-orange-400 transition-colors">SOHEL KHAN</span>
+                <span class="font-kanji text-xs text-orange-400/80 hidden sm:inline" title="Shinobi">忍</span>
+              </div>
+              <p class="text-[11px] font-mono text-slate-400 tracking-wide">CSE CORE • JECRC</p>
+            </div>
+          </a>
+
+          <!-- Desktop Navigation Links -->
+          <nav class="hidden lg:flex items-center space-x-1 xl:space-x-2 text-sm font-medium">
+            <a href="#about" class="desktop-nav-link px-3 py-2 text-slate-300 hover:text-orange-400 transition-colors">About</a>
+            <a href="#education" class="desktop-nav-link px-3 py-2 text-slate-300 hover:text-orange-400 transition-colors">Education</a>
+            <a href="#skills" class="desktop-nav-link px-3 py-2 text-slate-300 hover:text-orange-400 transition-colors">Skills</a>
+            <a href="#journey" class="desktop-nav-link px-3 py-2 text-slate-300 hover:text-orange-400 transition-colors">Ninja Journey</a>
+            <a href="#projects" class="desktop-nav-link px-3 py-2 text-slate-300 hover:text-orange-400 transition-colors">Projects</a>
+            <a href="#hobbies" class="desktop-nav-link px-3 py-2 text-slate-300 hover:text-orange-400 transition-colors">Hobbies</a>
+            <a href="#achievements" class="desktop-nav-link px-3 py-2 text-slate-300 hover:text-orange-400 transition-colors">Achievements</a>
+            <a href="#contact" class="desktop-nav-link px-3 py-2 text-slate-300 hover:text-orange-400 transition-colors">Contact</a>
+          </nav>
+
+          <!-- Contact CTA Button & Mobile Trigger -->
+          <div class="flex items-center gap-3">
+            <a href="#contact" class="hidden sm:inline-flex btn-chakra-primary text-xs uppercase tracking-wider py-2.5 px-4">
+              <i class="fa-solid fa-fire text-amber-300"></i>
+              <span>Get In Touch</span>
+            </a>
+
+            <!-- Mobile Hamburger Button -->
+            <button id="mobile-menu-btn" class="lg:hidden p-2.5 rounded-lg bg-slate-900/80 border border-slate-700/60 text-slate-300 hover:text-orange-400 hover:border-orange-500/50 focus:outline-none transition-colors" aria-label="Open Navigation Menu">
+              <i class="fa-solid fa-bars text-lg"></i>
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile Drawer Overlay & Backdrop -->
+    <div id="mobile-backdrop" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 opacity-0 pointer-events-none transition-opacity duration-300 lg:hidden"></div>
+    <div id="mobile-drawer" class="fixed top-0 right-0 w-72 sm:w-80 h-full bg-[#090d18] border-l border-orange-500/30 z-50 transform translate-x-full transition-transform duration-300 ease-out flex flex-col p-6 shadow-[0_0_50px_rgba(0,0,0,0.9)] lg:hidden">
+      <div class="flex items-center justify-between pb-6 border-b border-slate-800">
+        <div class="flex items-center gap-2">
+          <span class="font-ninja text-lg font-bold text-orange-400">SOHEL KHAN</span>
+          <span class="font-kanji text-xs text-red-400">火</span>
+        </div>
+        <button id="close-menu-btn" class="p-2 rounded-lg bg-slate-800/80 text-slate-400 hover:text-white" aria-label="Close Navigation Menu">
+          <i class="fa-solid fa-xmark text-lg"></i>
+        </button>
+      </div>
+
+      <nav class="flex flex-col space-y-3 mt-6 text-base font-medium">
+        <a href="#hero" class="mobile-nav-link px-3 py-2.5 rounded-lg hover:bg-orange-500/10 hover:text-orange-400 transition-colors">Home</a>
+        <a href="#about" class="mobile-nav-link px-3 py-2.5 rounded-lg hover:bg-orange-500/10 hover:text-orange-400 transition-colors">About Me</a>
+        <a href="#education" class="mobile-nav-link px-3 py-2.5 rounded-lg hover:bg-orange-500/10 hover:text-orange-400 transition-colors">Education</a>
+        <a href="#skills" class="mobile-nav-link px-3 py-2.5 rounded-lg hover:bg-orange-500/10 hover:text-orange-400 transition-colors">Skills</a>
+        <a href="#journey" class="mobile-nav-link px-3 py-2.5 rounded-lg hover:bg-orange-500/10 hover:text-orange-400 transition-colors">My Ninja Journey</a>
+        <a href="#projects" class="mobile-nav-link px-3 py-2.5 rounded-lg hover:bg-orange-500/10 hover:text-orange-400 transition-colors">Projects</a>
+        <a href="#hobbies" class="mobile-nav-link px-3 py-2.5 rounded-lg hover:bg-orange-500/10 hover:text-orange-400 transition-colors">Hobbies & Interests</a>
+        <a href="#achievements" class="mobile-nav-link px-3 py-2.5 rounded-lg hover:bg-orange-500/10 hover:text-orange-400 transition-colors">Achievements</a>
+        <a href="#contact" class="mobile-nav-link px-3 py-2.5 rounded-lg hover:bg-orange-500/10 hover:text-orange-400 transition-colors">Contact</a>
+      </nav>
+
+      <div class="mt-auto pt-6 border-t border-slate-800 text-center">
+        <p class="text-xs font-mono text-slate-400 mb-3">"Believe it. Work for it. Achieve it."</p>
+        <a href="#contact" class="mobile-nav-link block w-full py-2.5 px-4 btn-chakra-primary text-xs uppercase tracking-wider text-center">
+          Send a Scroll
+        </a>
+      </div>
+    </div>
+
+
+    <!-- ======================================================== -->
+    <!-- HERO SECTION -->
+    <!-- ======================================================== -->
+    <section id="hero" class="relative min-h-[90vh] flex items-center justify-center pt-8 pb-16 px-4 sm:px-6 lg:px-8">
+      <!-- Watermark Kanji -->
+      <div class="kanji-watermark text-[16vw] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+        木ノ葉
+      </div>
+
+      <div class="relative z-10 max-w-5xl mx-auto text-center">
+        
+        <!-- Shinobi Status Pill -->
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-900/90 border border-orange-500/30 text-xs sm:text-sm font-medium text-slate-300 mb-8 backdrop-blur-md shadow-[0_0_20px_rgba(255,107,0,0.15)] animate-flame-float">
+          <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 beacon-pulse"></span>
+          <span class="text-orange-400 font-semibold">Leaf Village Shinobi</span>
+          <span class="text-slate-600">•</span>
+          <span>B.Tech CSE Core @ JECRC University</span>
+        </div>
+
+        <!-- Main Name Title -->
+        <h1 class="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-ninja font-extrabold tracking-tight mb-4 text-white">
+          <span class="inline-block hover:scale-105 transition-transform duration-300">SOHEL</span>
+          <span class="text-chakra-gradient inline-block hover:scale-105 transition-transform duration-300">KHAN</span>
+        </h1>
+
+        <!-- Subtitle & Role -->
+        <div class="text-lg sm:text-2xl md:text-3xl font-semibold text-slate-200 mb-6 flex flex-wrap items-center justify-center gap-2">
+          <span class="text-slate-300">B.Tech CSE Core Student</span>
+          <span class="text-orange-500 font-bold hidden sm:inline">|</span>
+          <span class="text-chakra-cyan-gradient">Future Software Engineer</span>
+        </div>
+
+        <!-- Tagline (Requested) -->
+        <div class="max-w-2xl mx-auto mb-10">
+          <div class="relative inline-block px-6 py-2">
+            <span class="absolute -top-3 left-0 text-3xl text-orange-500/40 font-serif leading-none">“</span>
+            <p class="text-xl sm:text-2xl font-ninja font-bold text-amber-300 tracking-wide drop-shadow-[0_0_15px_rgba(255,170,0,0.35)]">
+              Believe it. Work for it. Achieve it.
+            </p>
+            <span class="absolute -bottom-3 right-0 text-3xl text-orange-500/40 font-serif leading-none">”</span>
+          </div>
+          <p class="text-sm sm:text-base text-slate-400 mt-2 max-w-xl mx-auto">
+            Channeling the Will of Fire into structured code, computational thinking, and relentless self-discipline.
+          </p>
+        </div>
+
+        <!-- Action Buttons (Requested) -->
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 mb-16">
+          <a href="#journey" class="btn-chakra-primary w-full sm:w-auto text-base">
+            <i class="fa-solid fa-compass text-amber-300"></i>
+            <span>Explore My Journey</span>
+          </a>
+          <a href="#contact" class="btn-chakra-secondary w-full sm:w-auto text-base">
+            <i class="fa-solid fa-paper-plane text-orange-400"></i>
+            <span>Contact Me</span>
+          </a>
+        </div>
+
+        <!-- Quick Ninja At-A-Glance Badges -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto text-left">
+          
+          <div class="ninja-card p-4">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-lg bg-orange-500/10 border border-orange-500/30 flex items-center justify-center text-orange-400">
+                <i class="fa-solid fa-graduation-cap"></i>
+              </div>
+              <div>
+                <p class="text-[11px] font-mono text-slate-400">ACADEMY</p>
+                <p class="text-sm font-bold text-white">JECRC University</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="ninja-card p-4">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-lg bg-red-500/10 border border-red-500/30 flex items-center justify-center text-red-400">
+                <i class="fa-solid fa-laptop-code"></i>
+              </div>
+              <div>
+                <p class="text-[11px] font-mono text-slate-400">SPECIALIZATION</p>
+                <p class="text-sm font-bold text-white">CSE Core</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="ninja-card p-4">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-lg bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400">
+                <i class="fa-solid fa-fire-flame-curved"></i>
+              </div>
+              <div>
+                <p class="text-[11px] font-mono text-slate-400">NINDO (WAY)</p>
+                <p class="text-sm font-bold text-white">Never Give Up</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="ninja-card p-4">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-lg bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400">
+                <i class="fa-solid fa-volleyball"></i>
+              </div>
+              <div>
+                <p class="text-[11px] font-mono text-slate-400">BALANCE</p>
+                <p class="text-sm font-bold text-white">Sports & Tech</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ======================================================== -->
+    <!-- ABOUT ME SECTION -->
+    <!-- ======================================================== -->
+    <section id="about" class="py-20 px-4 sm:px-6 lg:px-8 relative border-t border-slate-800/80">
+      <div class="kanji-watermark text-[14vw] right-4 top-10">忍道</div>
+
+      <div class="max-w-6xl mx-auto relative z-10">
+        
+        <!-- Section Header -->
+        <div class="text-center mb-16">
+          <div class="inline-flex items-center gap-2 text-xs font-mono text-orange-400 uppercase tracking-widest mb-2">
+            <i class="fa-solid fa-scroll text-amber-400"></i>
+            <span>The Shinobi Behind The Code</span>
+          </div>
+          <h2 class="text-3xl sm:text-5xl font-ninja font-extrabold text-white">
+            About <span class="text-chakra-gradient">Me</span>
+          </h2>
+          <div class="w-20 h-1 bg-gradient-to-r from-orange-500 to-red-500 mx-auto mt-4 rounded-full"></div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          
+          <!-- Shinobi Headband / Identity Card -->
+          <div class="lg:col-span-5 flex flex-col items-center">
+            <div class="ninja-card p-8 w-full max-w-md text-center relative overflow-hidden group">
+              <!-- Aura background glow -->
+              <div class="absolute -inset-1 bg-gradient-to-r from-orange-500/20 via-red-500/10 to-amber-500/20 rounded-2xl blur-lg opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
+              
+              <div class="relative z-10">
+                <!-- Ninja Headband Plate Motif -->
+                <div class="ninja-headband mb-6 w-full justify-center">
+                  <div class="flex items-center gap-3">
+                    <!-- Leaf Village Style Crest -->
+                    <svg viewBox="0 0 100 100" class="w-6 h-6" fill="none">
+                      <path d="M50 20 C65 20 78 32 78 48 C78 64 64 78 48 78 C35 78 25 68 25 55 C25 44 33 36 43 36 C51 36 57 42 57 50 C57 55 53 59 48 59" stroke="#cbd5e1" stroke-width="8" stroke-linecap="round"/>
+                      <polygon points="75,30 90,24 81,41" fill="#f87171"/>
+                    </svg>
+                    <span class="font-ninja text-xs tracking-widest text-slate-200 font-bold uppercase">HIDDEN LEAF CODER</span>
+                  </div>
+                </div>
+
+                <!-- Avatar Crest Box -->
+                <div class="w-32 h-32 mx-auto rounded-2xl bg-gradient-to-b from-orange-500/20 to-red-950/40 border-2 border-orange-500/50 p-3 flex items-center justify-center mb-6 shadow-[0_0_30px_rgba(255,107,0,0.3)]">
+                  <div class="w-full h-full rounded-xl bg-[#090e1a] flex flex-col items-center justify-center border border-orange-500/30">
+                    <span class="font-kanji text-4xl text-orange-400 font-bold">火</span>
+                    <span class="text-[10px] font-mono text-amber-300 mt-1">WILL OF FIRE</span>
+                  </div>
+                </div>
+
+                <h3 class="font-ninja text-2xl font-bold text-white mb-1">SOH-EL KHAN</h3>
+                <p class="text-xs font-mono text-orange-400 mb-4">ENGINEERING THE FUTURE</p>
+
+                <div class="pt-4 border-t border-slate-800 text-left space-y-2.5 text-xs">
+                  <div class="flex justify-between text-slate-300">
+                    <span class="text-slate-400">Academy:</span>
+                    <span class="font-semibold text-white">JECRC University</span>
+                  </div>
+                  <div class="flex justify-between text-slate-300">
+                    <span class="text-slate-400">Stream:</span>
+                    <span class="font-semibold text-orange-300">CSE Core (B.Tech)</span>
+                  </div>
+                  <div class="flex justify-between text-slate-300">
+                    <span class="text-slate-400">Core Passion:</span>
+                    <span class="font-semibold text-white">Problem Solving & Sports</span>
+                  </div>
+                  <div class="flex justify-between text-slate-300">
+                    <span class="text-slate-400">Status:</span>
+                    <span class="font-semibold text-emerald-400 flex items-center gap-1.5">
+                      <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+                      Open to Opportunities
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- About Narrative & Nindo (Philosophy) -->
+          <div class="lg:col-span-7 space-y-6">
+            
+            <!-- Main Bio Quote Card (Exact text from prompt) -->
+            <div class="ninja-card p-6 sm:p-8 border-l-4 border-l-orange-500">
+              <div class="flex items-center gap-2 text-xs font-mono text-orange-400 mb-3">
+                <i class="fa-solid fa-scroll"></i>
+                <span>OFFICIAL SHINOBI PROFILE</span>
+              </div>
+              <p class="text-base sm:text-lg text-slate-200 leading-relaxed font-sans font-medium">
+                "Hello! I'm Sohel Khan, a B.Tech CSE Core student at JECRC University. I am interested in technology, programming, and learning new skills. Outside academics, I enjoy playing sports. I believe in continuous improvement, discipline, teamwork, and never giving up."
+              </p>
+            </div>
+
+            <!-- Core Shinobi Principles (My Nindo) -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              
+              <div class="ninja-card p-4 hover:border-orange-500/50">
+                <div class="w-8 h-8 rounded-lg bg-orange-500/10 text-orange-400 flex items-center justify-center text-sm mb-3">
+                  <i class="fa-solid fa-fire"></i>
+                </div>
+                <h4 class="font-ninja text-sm font-bold text-white mb-1">Discipline</h4>
+                <p class="text-xs text-slate-400 leading-relaxed">
+                  Consistency in coding practice, foundational data structures, and daily problem solving.
+                </p>
+              </div>
+
+              <div class="ninja-card p-4 hover:border-amber-500/50">
+                <div class="w-8 h-8 rounded-lg bg-amber-500/10 text-amber-400 flex items-center justify-center text-sm mb-3">
+                  <i class="fa-solid fa-users"></i>
+                </div>
+                <h4 class="font-ninja text-sm font-bold text-white mb-1">Teamwork</h4>
+                <p class="text-xs text-slate-400 leading-relaxed">
+                  Honed on the sports ground and tech team projects. No great victory is won alone.
+                </p>
+              </div>
+
+              <div class="ninja-card p-4 hover:border-red-500/50">
+                <div class="w-8 h-8 rounded-lg bg-red-500/10 text-red-400 flex items-center justify-center text-sm mb-3">
+                  <i class="fa-solid fa-arrow-trend-up"></i>
+                </div>
+                <h4 class="font-ninja text-sm font-bold text-white mb-1">Relentless Growth</h4>
+                <p class="text-xs text-slate-400 leading-relaxed">
+                  Treating every bug as training and every challenge as a level up in mastery.
+                </p>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ======================================================== -->
+    <!-- EDUCATION SECTION -->
+    <!-- ======================================================== -->
+    <section id="education" class="py-20 px-4 sm:px-6 lg:px-8 relative border-t border-slate-800/80 bg-slate-950/40">
+      <div class="kanji-watermark text-[14vw] left-4 top-10">学歴</div>
+
+      <div class="max-w-5xl mx-auto relative z-10">
+        
+        <div class="text-center mb-16">
+          <div class="inline-flex items-center gap-2 text-xs font-mono text-orange-400 uppercase tracking-widest mb-2">
+            <i class="fa-solid fa-landmark text-amber-400"></i>
+            <span>Academy & Academic Grounding</span>
+          </div>
+          <h2 class="text-3xl sm:text-5xl font-ninja font-extrabold text-white">
+            <span class="text-chakra-gradient">Education</span> Timeline
+          </h2>
+          <div class="w-20 h-1 bg-gradient-to-r from-orange-500 to-red-500 mx-auto mt-4 rounded-full"></div>
+        </div>
+
+        <!-- Timeline Container -->
+        <div class="relative pl-6 sm:pl-10 border-l-2 border-orange-500/30 max-w-3xl mx-auto">
+          
+          <!-- Timeline Node Point -->
+          <div class="absolute -left-[13px] top-4 w-6 h-6 rounded-full bg-[#05070e] border-2 border-orange-500 flex items-center justify-center">
+            <span class="w-2.5 h-2.5 rounded-full bg-orange-400 animate-ping"></span>
+          </div>
+
+          <!-- Main Education Card (Requested) -->
+          <div class="ninja-card p-6 sm:p-8 animate-chakra-pulse">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
+              <div>
+                <span class="inline-block px-3 py-1 rounded-md bg-orange-500/10 border border-orange-500/30 text-orange-400 font-mono text-xs font-semibold mb-2">
+                  B.Tech Undergraduate
+                </span>
+                <h3 class="text-2xl sm:text-3xl font-ninja font-bold text-white">
+                  JECRC University
+                </h3>
+              </div>
+              <div class="text-left sm:text-right font-mono text-xs text-slate-400">
+                <p class="text-amber-400 font-semibold"><i class="fa-solid fa-location-dot mr-1"></i>Jaipur, Rajasthan</p>
+                <p>Present</p>
+              </div>
+            </div>
+
+            <div class="text-lg sm:text-xl font-semibold text-slate-200 mb-4 flex items-center gap-2">
+              <i class="fa-solid fa-code text-orange-500"></i>
+              <span>Computer Science Engineering (CSE Core)</span>
+            </div>
+
+            <p class="text-sm sm:text-base text-slate-300 leading-relaxed mb-6">
+              Immersed in deep computer science principles, algorithmic problem solving, software engineering methodologies, and low-level system understanding. Cultivating strong analytical reasoning through rigorous academic coursework and hands-on laboratory programming.
+            </p>
+
+            <!-- Academic Highlights Pills -->
+            <div class="pt-4 border-t border-slate-800">
+              <p class="text-xs font-mono text-slate-400 uppercase tracking-wider mb-3">Key Focus Areas & Academic Pillars:</p>
+              <div class="flex flex-wrap gap-2 text-xs">
+                <span class="px-3 py-1 rounded-md bg-slate-900 border border-slate-800 text-slate-300">
+                  <i class="fa-solid fa-microchip text-orange-400 mr-1.5"></i>Computer Science Foundations
+                </span>
+                <span class="px-3 py-1 rounded-md bg-slate-900 border border-slate-800 text-slate-300">
+                  <i class="fa-solid fa-diagram-project text-amber-400 mr-1.5"></i>Data Structures & C
+                </span>
+                <span class="px-3 py-1 rounded-md bg-slate-900 border border-slate-800 text-slate-300">
+                  <i class="fa-solid fa-network-wired text-cyan-400 mr-1.5"></i>Object-Oriented Programming
+                </span>
+                <span class="px-3 py-1 rounded-md bg-slate-900 border border-slate-800 text-slate-300">
+                  <i class="fa-solid fa-futbol text-red-400 mr-1.5"></i>Collegiate Sports & Team Leadership
+                </span>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ======================================================== -->
+    <!-- SKILLS SECTION -->
+    <!-- ======================================================== -->
+    <section id="skills" class="py-20 px-4 sm:px-6 lg:px-8 relative border-t border-slate-800/80">
+      <div class="kanji-watermark text-[14vw] right-4 top-10">術技</div>
+
+      <div class="max-w-6xl mx-auto relative z-10">
+        
+        <div class="text-center mb-12">
+          <div class="inline-flex items-center gap-2 text-xs font-mono text-orange-400 uppercase tracking-widest mb-2">
+            <i class="fa-solid fa-bolt text-amber-400"></i>
+            <span>Ninjutsu & Strategic Arsenal</span>
+          </div>
+          <h2 class="text-3xl sm:text-5xl font-ninja font-extrabold text-white">
+            Shinobi <span class="text-chakra-gradient">Skills</span>
+          </h2>
+          <p class="text-sm text-slate-400 mt-2 max-w-xl mx-auto">
+            Practical proficiencies across systems, web development, and collaborative execution. No artificial meters—just authentic capabilities.
+          </p>
+          <div class="w-20 h-1 bg-gradient-to-r from-orange-500 to-red-500 mx-auto mt-4 rounded-full"></div>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="flex flex-wrap items-center justify-center gap-2 mb-12">
+          <button class="skill-filter-btn px-4 py-2 rounded-lg text-xs sm:text-sm font-semibold transition-all bg-orange-500/20 border border-orange-500 text-orange-400" data-category="all">
+            All Jutsu (8)
+          </button>
+          <button class="skill-filter-btn px-4 py-2 rounded-lg text-xs sm:text-sm font-semibold transition-all bg-slate-900/60 border border-slate-800 text-slate-400 hover:text-white" data-category="tech">
+            Technical & Coding
+          </button>
+          <button class="skill-filter-btn px-4 py-2 rounded-lg text-xs sm:text-sm font-semibold transition-all bg-slate-900/60 border border-slate-800 text-slate-400 hover:text-white" data-category="core">
+            Core & Mindset
+          </button>
+        </div>
+
+        <!-- Skill Cards Grid (The 8 requested skills - NO fake percentage numbers) -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+          <!-- 1. C Programming -->
+          <div class="skill-card ninja-card p-6 flex flex-col justify-between group" data-category="tech">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="w-12 h-12 rounded-xl bg-orange-500/10 border border-orange-500/30 flex items-center justify-center text-xl text-orange-400 group-hover:scale-110 transition-transform">
+                  <i class="fa-solid fa-c"></i>
+                </div>
+                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-orange-950/40 text-orange-400 border border-orange-800/40">SYSTEMS</span>
+              </div>
+              <h3 class="font-ninja text-lg font-bold text-white mb-2 group-hover:text-orange-400 transition-colors">C Programming</h3>
+              <p class="text-xs text-slate-400 leading-relaxed">
+                Foundational computing mastery: pointers, manual memory allocation, data structures, and algorithmic execution close to the hardware.
+              </p>
+            </div>
+            <div class="mt-4 pt-4 border-t border-slate-800/80 flex items-center gap-2 text-[11px] font-mono text-slate-400">
+              <i class="fa-solid fa-code text-orange-500"></i>
+              <span>Core Language Foundation</span>
+            </div>
+          </div>
+
+          <!-- 2. Python -->
+          <div class="skill-card ninja-card p-6 flex flex-col justify-between group" data-category="tech">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-xl text-amber-400 group-hover:scale-110 transition-transform">
+                  <i class="fa-brands fa-python"></i>
+                </div>
+                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-amber-950/40 text-amber-400 border border-amber-800/40">SCRIPTING</span>
+              </div>
+              <h3 class="font-ninja text-lg font-bold text-white mb-2 group-hover:text-amber-400 transition-colors">Python</h3>
+              <p class="text-xs text-slate-400 leading-relaxed">
+                Clean and expressive coding for algorithmic problem-solving, rapid prototyping, scripting, and backend logic.
+              </p>
+            </div>
+            <div class="mt-4 pt-4 border-t border-slate-800/80 flex items-center gap-2 text-[11px] font-mono text-slate-400">
+              <i class="fa-solid fa-gear text-amber-500"></i>
+              <span>Versatile & Algorithmic</span>
+            </div>
+          </div>
+
+          <!-- 3. HTML -->
+          <div class="skill-card ninja-card p-6 flex flex-col justify-between group" data-category="tech">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="w-12 h-12 rounded-xl bg-red-500/10 border border-red-500/30 flex items-center justify-center text-xl text-red-400 group-hover:scale-110 transition-transform">
+                  <i class="fa-brands fa-html5"></i>
+                </div>
+                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-red-950/40 text-red-400 border border-red-800/40">WEB CORE</span>
+              </div>
+              <h3 class="font-ninja text-lg font-bold text-white mb-2 group-hover:text-red-400 transition-colors">HTML</h3>
+              <p class="text-xs text-slate-400 leading-relaxed">
+                Structuring accessible, semantic, and SEO-friendly document architectures adhering to modern modern web standards.
+              </p>
+            </div>
+            <div class="mt-4 pt-4 border-t border-slate-800/80 flex items-center gap-2 text-[11px] font-mono text-slate-400">
+              <i class="fa-solid fa-cubes text-red-500"></i>
+              <span>Semantic Structure</span>
+            </div>
+          </div>
+
+          <!-- 4. CSS -->
+          <div class="skill-card ninja-card p-6 flex flex-col justify-between group" data-category="tech">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-xl text-cyan-400 group-hover:scale-110 transition-transform">
+                  <i class="fa-brands fa-css3-alt"></i>
+                </div>
+                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-cyan-950/40 text-cyan-400 border border-cyan-800/40">STYLING</span>
+              </div>
+              <h3 class="font-ninja text-lg font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">CSS</h3>
+              <p class="text-xs text-slate-400 leading-relaxed">
+                Responsive layouts, Flexbox, Grid, custom keyframe animations, dark themes, and modern aesthetics like Tailwind.
+              </p>
+            </div>
+            <div class="mt-4 pt-4 border-t border-slate-800/80 flex items-center gap-2 text-[11px] font-mono text-slate-400">
+              <i class="fa-solid fa-palette text-cyan-500"></i>
+              <span>Responsive & Visual</span>
+            </div>
+          </div>
+
+          <!-- 5. JavaScript -->
+          <div class="skill-card ninja-card p-6 flex flex-col justify-between group" data-category="tech">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="w-12 h-12 rounded-xl bg-yellow-500/10 border border-yellow-500/30 flex items-center justify-center text-xl text-yellow-400 group-hover:scale-110 transition-transform">
+                  <i class="fa-brands fa-js"></i>
+                </div>
+                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-yellow-950/40 text-yellow-400 border border-yellow-800/40">INTERACTIVITY</span>
+              </div>
+              <h3 class="font-ninja text-lg font-bold text-white mb-2 group-hover:text-yellow-400 transition-colors">JavaScript</h3>
+              <p class="text-xs text-slate-400 leading-relaxed">
+                Dynamic DOM manipulation, asynchronous programming, modern ES6+ paradigms, and interactive client-side logic.
+              </p>
+            </div>
+            <div class="mt-4 pt-4 border-t border-slate-800/80 flex items-center gap-2 text-[11px] font-mono text-slate-400">
+              <i class="fa-solid fa-bolt text-yellow-500"></i>
+              <span>Dynamic Engine</span>
+            </div>
+          </div>
+
+          <!-- 6. Problem Solving -->
+          <div class="skill-card ninja-card p-6 flex flex-col justify-between group" data-category="core">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/30 flex items-center justify-center text-xl text-purple-400 group-hover:scale-110 transition-transform">
+                  <i class="fa-solid fa-brain"></i>
+                </div>
+                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-purple-950/40 text-purple-400 border border-purple-800/40">MINDSET</span>
+              </div>
+              <h3 class="font-ninja text-lg font-bold text-white mb-2 group-hover:text-purple-400 transition-colors">Problem Solving</h3>
+              <p class="text-xs text-slate-400 leading-relaxed">
+                Breaking complex computational challenges into clean, logical sub-steps. Tenacious debugging and continuous optimization.
+              </p>
+            </div>
+            <div class="mt-4 pt-4 border-t border-slate-800/80 flex items-center gap-2 text-[11px] font-mono text-slate-400">
+              <i class="fa-solid fa-lightbulb text-purple-500"></i>
+              <span>Analytical & Resilient</span>
+            </div>
+          </div>
+
+          <!-- 7. Communication -->
+          <div class="skill-card ninja-card p-6 flex flex-col justify-between group" data-category="core">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-xl text-emerald-400 group-hover:scale-110 transition-transform">
+                  <i class="fa-solid fa-comments"></i>
+                </div>
+                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-950/40 text-emerald-400 border border-emerald-800/40">STRATEGY</span>
+              </div>
+              <h3 class="font-ninja text-lg font-bold text-white mb-2 group-hover:text-emerald-400 transition-colors">Communication</h3>
+              <p class="text-xs text-slate-400 leading-relaxed">
+                Articulating technical ideas clearly, active listening, collaborative design discussions, and structured documentation.
+              </p>
+            </div>
+            <div class="mt-4 pt-4 border-t border-slate-800/80 flex items-center gap-2 text-[11px] font-mono text-slate-400">
+              <i class="fa-solid fa-bullhorn text-emerald-500"></i>
+              <span>Clear & Articulate</span>
+            </div>
+          </div>
+
+          <!-- 8. Teamwork -->
+          <div class="skill-card ninja-card p-6 flex flex-col justify-between group" data-category="core">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/30 flex items-center justify-center text-xl text-blue-400 group-hover:scale-110 transition-transform">
+                  <i class="fa-solid fa-people-group"></i>
+                </div>
+                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-blue-950/40 text-blue-400 border border-blue-800/40">SYNERGY</span>
+              </div>
+              <h3 class="font-ninja text-lg font-bold text-white mb-2 group-hover:text-blue-400 transition-colors">Teamwork</h3>
+              <p class="text-xs text-slate-400 leading-relaxed">
+                Forged through competitive sports and collaborative software sprints. Supporting peers, embracing diverse perspectives, and driving shared victory.
+              </p>
+            </div>
+            <div class="mt-4 pt-4 border-t border-slate-800/80 flex items-center gap-2 text-[11px] font-mono text-slate-400">
+              <i class="fa-solid fa-handshake text-blue-500"></i>
+              <span>Shared Success</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ======================================================== -->
+    <!-- MY NINJA JOURNEY (CREATIVE TIMELINE) -->
+    <!-- ======================================================== -->
+    <section id="journey" class="py-20 px-4 sm:px-6 lg:px-8 relative border-t border-slate-800/80 bg-slate-950/30">
+      <div class="kanji-watermark text-[14vw] left-4 top-10">道筋</div>
+
+      <div class="max-w-6xl mx-auto relative z-10">
+        
+        <div class="text-center mb-16">
+          <div class="inline-flex items-center gap-2 text-xs font-mono text-orange-400 uppercase tracking-widest mb-2">
+            <i class="fa-solid fa-route text-amber-400"></i>
+            <span>The Shinobi Progression Track</span>
+          </div>
+          <h2 class="text-3xl sm:text-5xl font-ninja font-extrabold text-white">
+            My <span class="text-chakra-gradient">Ninja Journey</span>
+          </h2>
+          <p class="text-sm text-slate-400 mt-2 max-w-xl mx-auto">
+            Academics → Skills → Projects → Sports → Future Goals. Connected by the glowing pulse of chakra energy.
+          </p>
+          <div class="w-20 h-1 bg-gradient-to-r from-orange-500 to-red-500 mx-auto mt-4 rounded-full"></div>
+        </div>
+
+        <!-- Desktop Horizontal / Mobile Vertical Timeline -->
+        <div class="relative">
+          
+          <!-- Connecting Chakra Line (Desktop) -->
+          <div class="hidden lg:block absolute top-1/2 left-4 right-4 h-1 chakra-journey-line -translate-y-1/2 z-0 rounded-full"></div>
+          
+          <!-- Connecting Chakra Line (Mobile) -->
+          <div class="lg:hidden absolute top-8 bottom-8 left-8 w-1 chakra-journey-line-vertical z-0 rounded-full"></div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-5 gap-8 relative z-10">
+
+            <!-- 1. Academics -->
+            <div class="relative flex lg:flex-col items-start lg:items-center text-left lg:text-center group pl-16 lg:pl-0">
+              <!-- Node circle -->
+              <div class="absolute left-4 lg:left-1/2 lg:-translate-x-1/2 w-9 h-9 rounded-full bg-[#05070e] border-2 border-orange-500 flex items-center justify-center text-orange-400 group-hover:scale-125 group-hover:border-amber-400 group-hover:shadow-[0_0_20px_rgba(255,107,0,0.8)] transition-all">
+                <i class="fa-solid fa-graduation-cap text-xs"></i>
+              </div>
+              
+              <div class="ninja-card p-5 w-full lg:mt-14 hover:border-orange-500">
+                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-orange-950/60 text-orange-400 border border-orange-800/40 inline-block mb-2">PHASE 01</span>
+                <h3 class="font-ninja text-base font-bold text-white mb-1">Academics</h3>
+                <p class="text-xs font-semibold text-orange-300 mb-2">JECRC University</p>
+                <p class="text-xs text-slate-400 leading-relaxed">
+                  Stepping into CSE Core; building unshakeable mathematical and architectural computer science fundamentals.
+                </p>
+              </div>
+            </div>
+
+            <!-- 2. Skills -->
+            <div class="relative flex lg:flex-col items-start lg:items-center text-left lg:text-center group pl-16 lg:pl-0">
+              <!-- Node circle -->
+              <div class="absolute left-4 lg:left-1/2 lg:-translate-x-1/2 w-9 h-9 rounded-full bg-[#05070e] border-2 border-amber-500 flex items-center justify-center text-amber-400 group-hover:scale-125 group-hover:border-amber-300 group-hover:shadow-[0_0_20px_rgba(255,170,0,0.8)] transition-all">
+                <i class="fa-solid fa-code text-xs"></i>
+              </div>
+              
+              <div class="ninja-card p-5 w-full lg:mt-14 hover:border-amber-500">
+                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-amber-950/60 text-amber-400 border border-amber-800/40 inline-block mb-2">PHASE 02</span>
+                <h3 class="font-ninja text-base font-bold text-white mb-1">Skills</h3>
+                <p class="text-xs font-semibold text-amber-300 mb-2">C, Python & Web</p>
+                <p class="text-xs text-slate-400 leading-relaxed">
+                  Diving into memory management with C, scripting in Python, and crafting dynamic interfaces with HTML/CSS/JS.
+                </p>
+              </div>
+            </div>
+
+            <!-- 3. Projects -->
+            <div class="relative flex lg:flex-col items-start lg:items-center text-left lg:text-center group pl-16 lg:pl-0">
+              <!-- Node circle -->
+              <div class="absolute left-4 lg:left-1/2 lg:-translate-x-1/2 w-9 h-9 rounded-full bg-[#05070e] border-2 border-red-500 flex items-center justify-center text-red-400 group-hover:scale-125 group-hover:border-red-400 group-hover:shadow-[0_0_20px_rgba(255,42,42,0.8)] transition-all">
+                <i class="fa-solid fa-fire text-xs"></i>
+              </div>
+              
+              <div class="ninja-card p-5 w-full lg:mt-14 hover:border-red-500">
+                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-red-950/60 text-red-400 border border-red-800/40 inline-block mb-2">PHASE 03</span>
+                <h3 class="font-ninja text-base font-bold text-white mb-1">Projects</h3>
+                <p class="text-xs font-semibold text-red-300 mb-2">Hands-on Code</p>
+                <p class="text-xs text-slate-400 leading-relaxed">
+                  Transforming syntax into software. Building real-world tools, portfolio architectures, and algorithmic systems.
+                </p>
+              </div>
+            </div>
+
+            <!-- 4. Sports -->
+            <div class="relative flex lg:flex-col items-start lg:items-center text-left lg:text-center group pl-16 lg:pl-0">
+              <!-- Node circle -->
+              <div class="absolute left-4 lg:left-1/2 lg:-translate-x-1/2 w-9 h-9 rounded-full bg-[#05070e] border-2 border-cyan-500 flex items-center justify-center text-cyan-400 group-hover:scale-125 group-hover:border-cyan-300 group-hover:shadow-[0_0_20px_rgba(0,210,255,0.8)] transition-all">
+                <i class="fa-solid fa-medal text-xs"></i>
+              </div>
+              
+              <div class="ninja-card p-5 w-full lg:mt-14 hover:border-cyan-500">
+                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-cyan-950/60 text-cyan-400 border border-cyan-800/40 inline-block mb-2">PHASE 04</span>
+                <h3 class="font-ninja text-base font-bold text-white mb-1">Sports & Balance</h3>
+                <p class="text-xs font-semibold text-cyan-300 mb-2">Endurance & Team</p>
+                <p class="text-xs text-slate-400 leading-relaxed">
+                  Channeling energy on the field. Cultivating stamina, quick decision-making, and unbreakable resilience.
+                </p>
+              </div>
+            </div>
+
+            <!-- 5. Future Goals -->
+            <div class="relative flex lg:flex-col items-start lg:items-center text-left lg:text-center group pl-16 lg:pl-0">
+              <!-- Node circle -->
+              <div class="absolute left-4 lg:left-1/2 lg:-translate-x-1/2 w-9 h-9 rounded-full bg-[#05070e] border-2 border-emerald-500 flex items-center justify-center text-emerald-400 group-hover:scale-125 group-hover:border-emerald-300 group-hover:shadow-[0_0_20px_rgba(16,185,129,0.8)] transition-all">
+                <i class="fa-solid fa-flag-checkered text-xs"></i>
+              </div>
+              
+              <div class="ninja-card p-5 w-full lg:mt-14 hover:border-emerald-500">
+                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-950/60 text-emerald-400 border border-emerald-800/40 inline-block mb-2">PHASE 05</span>
+                <h3 class="font-ninja text-base font-bold text-white mb-1">Future Goals</h3>
+                <p class="text-xs font-semibold text-emerald-300 mb-2">Software Engineer</p>
+                <p class="text-xs text-slate-400 leading-relaxed">
+                  Stepping into the tech industry to engineer high-impact systems, contribute to open source, and never stop learning.
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ======================================================== -->
+    <!-- PROJECTS SECTION -->
+    <!-- ======================================================== -->
+    <section id="projects" class="py-20 px-4 sm:px-6 lg:px-8 relative border-t border-slate-800/80">
+      <div class="kanji-watermark text-[14vw] right-4 top-10">任務</div>
+
+      <div class="max-w-6xl mx-auto relative z-10">
+        
+        <div class="text-center mb-16">
+          <div class="inline-flex items-center gap-2 text-xs font-mono text-orange-400 uppercase tracking-widest mb-2">
+            <i class="fa-solid fa-diagram-project text-amber-400"></i>
+            <span>Missions & Artifacts</span>
+          </div>
+          <h2 class="text-3xl sm:text-5xl font-ninja font-extrabold text-white">
+            Featured <span class="text-chakra-gradient">Projects</span>
+          </h2>
+          <p class="text-sm text-slate-400 mt-2 max-w-xl mx-auto">
+            Practical demonstrations of code, logic, and user-centric design.
+          </p>
+          <div class="w-20 h-1 bg-gradient-to-r from-orange-500 to-red-500 mx-auto mt-4 rounded-full"></div>
+        </div>
+
+        <!-- Project Cards Grid (The 3 requested projects + placeholder) -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+          <!-- 1. Portfolio Website -->
+          <div class="ninja-card flex flex-col justify-between group overflow-hidden">
+            <div>
+              <!-- Visual Card Header -->
+              <div class="h-44 bg-gradient-to-br from-orange-950/40 via-[#0a0f1d] to-black relative p-6 flex flex-col justify-between border-b border-orange-500/20 group-hover:border-orange-500/50 transition-colors">
+                <div class="flex items-center justify-between">
+                  <span class="text-[10px] font-mono px-2.5 py-1 rounded-full bg-orange-500/20 text-orange-400 border border-orange-500/40 font-semibold">
+                    <i class="fa-solid fa-circle-check mr-1 text-emerald-400"></i>LIVE PROJECT
+                  </span>
+                  <div class="w-8 h-8 rounded-lg bg-orange-500/10 flex items-center justify-center text-orange-400">
+                    <i class="fa-solid fa-globe"></i>
+                  </div>
+                </div>
+                <div>
+                  <span class="text-xs font-mono text-orange-300">MISSION RANK: A</span>
+                  <h3 class="font-ninja text-xl font-bold text-white group-hover:text-orange-400 transition-colors">
+                    Portfolio Website
+                  </h3>
+                </div>
+              </div>
+
+              <!-- Card Body -->
+              <div class="p-6">
+                <p class="text-xs sm:text-sm text-slate-300 leading-relaxed mb-6">
+                  A modern, anime-inspired ninja personal portfolio designed with dark chakra aesthetics, HTML5 Canvas particles, responsive Tailwind CSS layouts, and Japanese patterns.
+                </p>
+
+                <!-- Tech Tags -->
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <span class="text-[11px] font-mono px-2.5 py-1 rounded bg-slate-900 border border-slate-800 text-orange-300">HTML5</span>
+                  <span class="text-[11px] font-mono px-2.5 py-1 rounded bg-slate-900 border border-slate-800 text-amber-300">Tailwind CSS</span>
+                  <span class="text-[11px] font-mono px-2.5 py-1 rounded bg-slate-900 border border-slate-800 text-yellow-300">JavaScript</span>
+                  <span class="text-[11px] font-mono px-2.5 py-1 rounded bg-slate-900 border border-slate-800 text-cyan-300">Canvas</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card Actions -->
+            <div class="p-6 pt-0">
+              <a href="#hero" class="btn-chakra-primary w-full text-xs uppercase tracking-wider py-2.5">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                <span>View Project</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- 2. C Programming Project -->
+          <div class="ninja-card flex flex-col justify-between group overflow-hidden">
+            <div>
+              <!-- Visual Card Header -->
+              <div class="h-44 bg-gradient-to-br from-red-950/40 via-[#0a0f1d] to-black relative p-6 flex flex-col justify-between border-b border-red-500/20 group-hover:border-red-500/50 transition-colors">
+                <div class="flex items-center justify-between">
+                  <span class="text-[10px] font-mono px-2.5 py-1 rounded-full bg-red-500/20 text-red-400 border border-red-500/40 font-semibold">
+                    <i class="fa-solid fa-terminal mr-1"></i>SYSTEMS CORE
+                  </span>
+                  <div class="w-8 h-8 rounded-lg bg-red-500/10 flex items-center justify-center text-red-400">
+                    <i class="fa-solid fa-c"></i>
+                  </div>
+                </div>
+                <div>
+                  <span class="text-xs font-mono text-red-300">MISSION RANK: B</span>
+                  <h3 class="font-ninja text-xl font-bold text-white group-hover:text-red-400 transition-colors">
+                    C Programming Project
+                  </h3>
+                </div>
+              </div>
+
+              <!-- Card Body -->
+              <div class="p-6">
+                <p class="text-xs sm:text-sm text-slate-300 leading-relaxed mb-6">
+                  Algorithmic system and data record management utility built in C. Explores pointer arithmetic, dynamic memory allocation, linked lists, and persistent file input/output operations.
+                </p>
+
+                <!-- Tech Tags -->
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <span class="text-[11px] font-mono px-2.5 py-1 rounded bg-slate-900 border border-slate-800 text-orange-300">C Language</span>
+                  <span class="text-[11px] font-mono px-2.5 py-1 rounded bg-slate-900 border border-slate-800 text-red-300">Data Structures</span>
+                  <span class="text-[11px] font-mono px-2.5 py-1 rounded bg-slate-900 border border-slate-800 text-slate-300">Algorithms</span>
+                  <span class="text-[11px] font-mono px-2.5 py-1 rounded bg-slate-900 border border-slate-800 text-amber-300">File I/O</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card Actions -->
+            <div class="p-6 pt-0">
+              <a href="https://github.com/sohelkhan" target="_blank" rel="noopener noreferrer" class="btn-chakra-secondary w-full text-xs uppercase tracking-wider py-2.5">
+                <i class="fa-brands fa-github text-slate-300"></i>
+                <span>View Project</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- 3. Future Project -->
+          <div class="ninja-card flex flex-col justify-between group overflow-hidden">
+            <div>
+              <!-- Visual Card Header -->
+              <div class="h-44 bg-gradient-to-br from-cyan-950/40 via-[#0a0f1d] to-black relative p-6 flex flex-col justify-between border-b border-cyan-500/20 group-hover:border-cyan-500/50 transition-colors">
+                <div class="flex items-center justify-between">
+                  <span class="text-[10px] font-mono px-2.5 py-1 rounded-full bg-cyan-500/20 text-cyan-400 border border-cyan-500/40 font-semibold">
+                    <i class="fa-solid fa-hourglass-half mr-1"></i>IN DEVELOPMENT
+                  </span>
+                  <div class="w-8 h-8 rounded-lg bg-cyan-500/10 flex items-center justify-center text-cyan-400">
+                    <i class="fa-solid fa-rocket"></i>
+                  </div>
+                </div>
+                <div>
+                  <span class="text-xs font-mono text-cyan-300">MISSION RANK: S</span>
+                  <h3 class="font-ninja text-xl font-bold text-white group-hover:text-cyan-400 transition-colors">
+                    Future Project
+                  </h3>
+                </div>
+              </div>
+
+              <!-- Card Body -->
+              <div class="p-6">
+                <p class="text-xs sm:text-sm text-slate-300 leading-relaxed mb-6">
+                  An upcoming full-stack application and developer productivity suite currently in active architecture phase. Designed to integrate modern APIs, clean interfaces, and robust backend services.
+                </p>
+
+                <!-- Tech Tags -->
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <span class="text-[11px] font-mono px-2.5 py-1 rounded bg-slate-900 border border-slate-800 text-cyan-300">Python</span>
+                  <span class="text-[11px] font-mono px-2.5 py-1 rounded bg-slate-900 border border-slate-800 text-yellow-300">JavaScript</span>
+                  <span class="text-[11px] font-mono px-2.5 py-1 rounded bg-slate-900 border border-slate-800 text-emerald-300">Full-Stack</span>
+                  <span class="text-[11px] font-mono px-2.5 py-1 rounded bg-slate-900 border border-slate-800 text-purple-300">REST APIs</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card Actions -->
+            <div class="p-6 pt-0">
+              <a href="https://github.com/sohelkhan" target="_blank" rel="noopener noreferrer" class="btn-chakra-secondary w-full text-xs uppercase tracking-wider py-2.5 opacity-90">
+                <i class="fa-solid fa-code-branch text-cyan-400"></i>
+                <span>View Project</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ======================================================== -->
+    <!-- HOBBIES & INTERESTS SECTION -->
+    <!-- ======================================================== -->
+    <section id="hobbies" class="py-20 px-4 sm:px-6 lg:px-8 relative border-t border-slate-800/80 bg-slate-950/40">
+      <div class="kanji-watermark text-[14vw] left-4 top-10">情熱</div>
+
+      <div class="max-w-6xl mx-auto relative z-10">
+        
+        <div class="text-center mb-16">
+          <div class="inline-flex items-center gap-2 text-xs font-mono text-orange-400 uppercase tracking-widest mb-2">
+            <i class="fa-solid fa-fire-burner text-amber-400"></i>
+            <span>Fuel For The Ninja Soul</span>
+          </div>
+          <h2 class="text-3xl sm:text-5xl font-ninja font-extrabold text-white">
+            Hobbies & <span class="text-chakra-gradient">Interests</span>
+          </h2>
+          <p class="text-sm text-slate-400 mt-2 max-w-xl mx-auto">
+            The balance of athletic stamina and relentless curiosity that keeps the mind and body primed.
+          </p>
+          <div class="w-20 h-1 bg-gradient-to-r from-orange-500 to-red-500 mx-auto mt-4 rounded-full"></div>
+        </div>
+
+        <!-- 4 Naruto-Inspired Pillars (Requested) -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+          <!-- 1. Playing Sports -->
+          <div class="ninja-card p-6 flex flex-col justify-between group hover:border-amber-500/70">
+            <div>
+              <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-amber-500/20 to-orange-500/10 border border-amber-500/30 flex items-center justify-center text-3xl text-amber-400 mb-5 group-hover:scale-110 transition-transform">
+                🏆
+              </div>
+              <span class="text-[10px] font-mono text-amber-400 tracking-wider uppercase block mb-1">Taijutsu Stamina</span>
+              <h3 class="font-ninja text-xl font-bold text-white mb-3">Playing Sports</h3>
+              <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                Active on the ground. Football, badminton, and outdoor sports teach quick reflexes, tactical teamwork, physical endurance, and keeping a cool head under pressure.
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-slate-800 text-xs font-mono text-amber-400 flex items-center gap-2">
+              <i class="fa-solid fa-heart-pulse"></i>
+              <span>Energy & Reflexes</span>
+            </div>
+          </div>
+
+          <!-- 2. Technology & Coding -->
+          <div class="ninja-card p-6 flex flex-col justify-between group hover:border-yellow-500/70">
+            <div>
+              <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-yellow-500/20 to-orange-500/10 border border-yellow-500/30 flex items-center justify-center text-3xl text-yellow-400 mb-5 group-hover:scale-110 transition-transform">
+                ⚡
+              </div>
+              <span class="text-[10px] font-mono text-yellow-400 tracking-wider uppercase block mb-1">Lightning Ninjutsu</span>
+              <h3 class="font-ninja text-xl font-bold text-white mb-3">Technology & Coding</h3>
+              <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                Fascinated by computer architecture, software development, and building digital tools that solve practical problems. Coding is an art form of logic and creativity.
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-slate-800 text-xs font-mono text-yellow-400 flex items-center gap-2">
+              <i class="fa-solid fa-code"></i>
+              <span>Crafting Solutions</span>
+            </div>
+          </div>
+
+          <!-- 3. Learning New Skills -->
+          <div class="ninja-card p-6 flex flex-col justify-between group hover:border-cyan-500/70">
+            <div>
+              <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-cyan-500/20 to-blue-500/10 border border-cyan-500/30 flex items-center justify-center text-3xl text-cyan-400 mb-5 group-hover:scale-110 transition-transform">
+                🎯
+              </div>
+              <span class="text-[10px] font-mono text-cyan-400 tracking-wider uppercase block mb-1">Sharpened Focus</span>
+              <h3 class="font-ninja text-xl font-bold text-white mb-3">Learning New Skills</h3>
+              <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                A shinobi never stagnates. Constantly exploring modern frameworks, developer tools, algorithms, and technical concepts to stay ahead of the curve.
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-slate-800 text-xs font-mono text-cyan-400 flex items-center gap-2">
+              <i class="fa-solid fa-compass"></i>
+              <span>Curiosity Driven</span>
+            </div>
+          </div>
+
+          <!-- 4. Personal Growth -->
+          <div class="ninja-card p-6 flex flex-col justify-between group hover:border-red-500/70">
+            <div>
+              <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-red-500/20 to-orange-500/10 border border-red-500/30 flex items-center justify-center text-3xl text-red-400 mb-5 group-hover:scale-110 transition-transform">
+                🔥
+              </div>
+              <span class="text-[10px] font-mono text-red-400 tracking-wider uppercase block mb-1">Will Of Fire</span>
+              <h3 class="font-ninja text-xl font-bold text-white mb-3">Personal Growth</h3>
+              <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                Daily discipline, mental resilience, self-reflection, and embodying the motto: "Believe it. Work for it. Achieve it." Continuous improvement in every sphere of life.
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-slate-800 text-xs font-mono text-red-400 flex items-center gap-2">
+              <i class="fa-solid fa-dumbbell"></i>
+              <span>Relentless Evolution</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ======================================================== -->
+    <!-- ACHIEVEMENTS SECTION -->
+    <!-- ======================================================== -->
+    <section id="achievements" class="py-20 px-4 sm:px-6 lg:px-8 relative border-t border-slate-800/80">
+      <div class="kanji-watermark text-[14vw] right-4 top-10">栄誉</div>
+
+      <div class="max-w-6xl mx-auto relative z-10">
+        
+        <div class="text-center mb-16">
+          <div class="inline-flex items-center gap-2 text-xs font-mono text-orange-400 uppercase tracking-widest mb-2">
+            <i class="fa-solid fa-award text-amber-400"></i>
+            <span>Badges of Honor</span>
+          </div>
+          <h2 class="text-3xl sm:text-5xl font-ninja font-extrabold text-white">
+            Shinobi <span class="text-chakra-gradient">Achievements</span>
+          </h2>
+          <p class="text-sm text-slate-400 mt-2 max-w-xl mx-auto">
+            Milestones and recognition across academics, athletics, and technical development.
+          </p>
+          <div class="w-20 h-1 bg-gradient-to-r from-orange-500 to-red-500 mx-auto mt-4 rounded-full"></div>
+        </div>
+
+        <!-- 4 Editable Placeholder Cards (Requested: Academic, Sports, Certifications, Competitions) -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+          <!-- 1. Academic Achievements -->
+          <div class="ninja-card p-6 sm:p-8 flex items-start gap-5 border-l-4 border-l-orange-500">
+            <div class="w-12 h-12 rounded-xl bg-orange-500/10 border border-orange-500/30 flex-shrink-0 flex items-center justify-center text-xl text-orange-400">
+              <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+            <div class="flex-1">
+              <div class="flex items-center justify-between gap-2 mb-1">
+                <h3 class="font-ninja text-lg font-bold text-white">Academic Achievements</h3>
+                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-800 text-slate-300">B.Tech CSE Core</span>
+              </div>
+              <p class="text-xs sm:text-sm text-slate-300 leading-relaxed mb-3">
+                Maintained consistent academic dedication and strong coursework performance in foundational Computer Science subjects at JECRC University.
+              </p>
+              <div class="text-xs font-mono text-orange-400/80 flex items-center gap-1.5">
+                <i class="fa-solid fa-pen-to-square text-[11px]"></i>
+                <span>[Editable: Add your semester score, honor list, or academic awards]</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. Sports Achievements -->
+          <div class="ninja-card p-6 sm:p-8 flex items-start gap-5 border-l-4 border-l-amber-500">
+            <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/30 flex-shrink-0 flex items-center justify-center text-xl text-amber-400">
+              <i class="fa-solid fa-trophy"></i>
+            </div>
+            <div class="flex-1">
+              <div class="flex items-center justify-between gap-2 mb-1">
+                <h3 class="font-ninja text-lg font-bold text-white">Sports Achievements</h3>
+                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-800 text-slate-300">Athletics</span>
+              </div>
+              <p class="text-xs sm:text-sm text-slate-300 leading-relaxed mb-3">
+                Active participant in university sports tournaments and collegiate athletic events, representing team spirit and sporting excellence.
+              </p>
+              <div class="text-xs font-mono text-amber-400/80 flex items-center gap-1.5">
+                <i class="fa-solid fa-pen-to-square text-[11px]"></i>
+                <span>[Editable: Add specific sport, tournament name, medal or position]</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. Certifications -->
+          <div class="ninja-card p-6 sm:p-8 flex items-start gap-5 border-l-4 border-l-cyan-500">
+            <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex-shrink-0 flex items-center justify-center text-xl text-cyan-400">
+              <i class="fa-solid fa-certificate"></i>
+            </div>
+            <div class="flex-1">
+              <div class="flex items-center justify-between gap-2 mb-1">
+                <h3 class="font-ninja text-lg font-bold text-white">Certifications</h3>
+                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-800 text-slate-300">Credentials</span>
+              </div>
+              <p class="text-xs sm:text-sm text-slate-300 leading-relaxed mb-3">
+                Pursuing technical and programming credentials in C programming, Python basics, web development, and algorithmic logic.
+              </p>
+              <div class="text-xs font-mono text-cyan-400/80 flex items-center gap-1.5">
+                <i class="fa-solid fa-pen-to-square text-[11px]"></i>
+                <span>[Editable: Add your certificate name, issuing authority & link]</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4. Competitions -->
+          <div class="ninja-card p-6 sm:p-8 flex items-start gap-5 border-l-4 border-l-red-500">
+            <div class="w-12 h-12 rounded-xl bg-red-500/10 border border-red-500/30 flex-shrink-0 flex items-center justify-center text-xl text-red-400">
+              <i class="fa-solid fa-medal"></i>
+            </div>
+            <div class="flex-1">
+              <div class="flex items-center justify-between gap-2 mb-1">
+                <h3 class="font-ninja text-lg font-bold text-white">Competitions</h3>
+                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-800 text-slate-300">Coding Contests</span>
+              </div>
+              <p class="text-xs sm:text-sm text-slate-300 leading-relaxed mb-3">
+                Participation in collegiate coding contests, technical workshops, and departmental problem-solving challenges at JECRC University.
+              </p>
+              <div class="text-xs font-mono text-red-400/80 flex items-center gap-1.5">
+                <i class="fa-solid fa-pen-to-square text-[11px]"></i>
+                <span>[Editable: Add hackathons, contest name, rank or participation]</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ======================================================== -->
+    <!-- CONTACT SECTION -->
+    <!-- ======================================================== -->
+    <section id="contact" class="py-20 px-4 sm:px-6 lg:px-8 relative border-t border-slate-800/80 bg-slate-950/40">
+      <div class="kanji-watermark text-[14vw] left-4 top-10">通信</div>
+
+      <div class="max-w-6xl mx-auto relative z-10">
+        
+        <div class="text-center mb-16">
+          <div class="inline-flex items-center gap-2 text-xs font-mono text-orange-400 uppercase tracking-widest mb-2">
+            <i class="fa-solid fa-envelope-open-text text-amber-400"></i>
+            <span>Send a Ninja Scroll</span>
+          </div>
+          <h2 class="text-3xl sm:text-5xl font-ninja font-extrabold text-white">
+            Contact <span class="text-chakra-gradient">Me</span>
+          </h2>
+          <p class="text-sm text-slate-400 mt-2 max-w-xl mx-auto">
+            Have a project in mind, want to collaborate, or discuss technology and sports? Reach out!
+          </p>
+          <div class="w-20 h-1 bg-gradient-to-r from-orange-500 to-red-500 mx-auto mt-4 rounded-full"></div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+
+          <!-- Contact Form (Requested: Name, Email, Message, Send Message) -->
+          <div class="lg:col-span-7">
+            <div class="ninja-card p-6 sm:p-8">
+              <h3 class="font-ninja text-xl font-bold text-white mb-2">Dispatch Your Message</h3>
+              <p class="text-xs text-slate-400 mb-6">Fill in the fields below to deliver a digital ninja scroll directly.</p>
+
+              <form id="ninja-contact-form" class="space-y-5">
+                <div>
+                  <label for="contact-name" class="block text-xs font-mono text-slate-300 uppercase tracking-wider mb-2">
+                    Your Name <span class="text-orange-500">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    id="contact-name"
+                    required
+                    placeholder="e.g. Kakashi Hatake / Recruiter Name"
+                    class="w-full px-4 py-3 rounded-lg bg-slate-900/80 border border-slate-800 text-white placeholder-slate-500 focus:outline-none focus:border-orange-500 focus:ring-1 focus:ring-orange-500 transition-colors text-sm"
+                  />
+                </div>
+
+                <div>
+                  <label for="contact-email" class="block text-xs font-mono text-slate-300 uppercase tracking-wider mb-2">
+                    Your Email <span class="text-orange-500">*</span>
+                  </label>
+                  <input
+                    type="email"
+                    id="contact-email"
+                    required
+                    placeholder="e.g. you@example.com"
+                    class="w-full px-4 py-3 rounded-lg bg-slate-900/80 border border-slate-800 text-white placeholder-slate-500 focus:outline-none focus:border-orange-500 focus:ring-1 focus:ring-orange-500 transition-colors text-sm"
+                  />
+                </div>
+
+                <div>
+                  <label for="contact-message" class="block text-xs font-mono text-slate-300 uppercase tracking-wider mb-2">
+                    Your Message <span class="text-orange-500">*</span>
+                  </label>
+                  <textarea
+                    id="contact-message"
+                    required
+                    rows="5"
+                    placeholder="Write your mission inquiry, collaboration opportunity, or greeting..."
+                    class="w-full px-4 py-3 rounded-lg bg-slate-900/80 border border-slate-800 text-white placeholder-slate-500 focus:outline-none focus:border-orange-500 focus:ring-1 focus:ring-orange-500 transition-colors text-sm"
+                  ></textarea>
+                </div>
+
+                <button
+                  type="submit"
+                  class="btn-chakra-primary w-full text-sm uppercase tracking-wider py-3.5"
+                >
+                  <i class="fa-solid fa-paper-plane text-amber-300"></i>
+                  <span>Send Message</span>
+                </button>
+              </form>
+            </div>
+          </div>
+
+          <!-- Socials & Direct Reach Info (Requested: GitHub, LinkedIn, Instagram placeholders) -->
+          <div class="lg:col-span-5 space-y-6">
+            
+            <!-- Quick Info Card -->
+            <div class="ninja-card p-6 sm:p-8">
+              <h3 class="font-ninja text-xl font-bold text-white mb-4">Direct Coordinates</h3>
+              
+              <div class="space-y-4 text-sm">
+                
+                <div class="flex items-center gap-4">
+                  <div class="w-10 h-10 rounded-lg bg-orange-500/10 text-orange-400 flex items-center justify-center flex-shrink-0">
+                    <i class="fa-solid fa-envelope"></i>
+                  </div>
+                  <div>
+                    <p class="text-xs font-mono text-slate-400">EMAIL</p>
+                    <a href="mailto:sohelkhan@example.com" class="text-slate-200 hover:text-orange-400 font-semibold transition-colors">
+                      sohelkhan@example.com
+                    </a>
+                  </div>
+                </div>
+
+                <div class="flex items-center gap-4">
+                  <div class="w-10 h-10 rounded-lg bg-amber-500/10 text-amber-400 flex items-center justify-center flex-shrink-0">
+                    <i class="fa-solid fa-location-dot"></i>
+                  </div>
+                  <div>
+                    <p class="text-xs font-mono text-slate-400">LOCATION</p>
+                    <p class="text-slate-200 font-semibold">Jaipur, Rajasthan, India</p>
+                  </div>
+                </div>
+
+                <div class="flex items-center gap-4">
+                  <div class="w-10 h-10 rounded-lg bg-red-500/10 text-red-400 flex items-center justify-center flex-shrink-0">
+                    <i class="fa-solid fa-building-columns"></i>
+                  </div>
+                  <div>
+                    <p class="text-xs font-mono text-slate-400">ACADEMY</p>
+                    <p class="text-slate-200 font-semibold">JECRC University</p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- Social Media Cards (Requested: GitHub, LinkedIn, Instagram) -->
+            <div class="ninja-card p-6 sm:p-8">
+              <h3 class="font-ninja text-lg font-bold text-white mb-2">Connect Across Networks</h3>
+              <p class="text-xs text-slate-400 mb-6">Explore my code repositories, professional profile, and social activities.</p>
+
+              <div class="space-y-3">
+                
+                <!-- GitHub -->
+                <a
+                  href="https://github.com/sohelkhan"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="flex items-center justify-between p-3.5 rounded-xl bg-slate-900/60 border border-slate-800 hover:border-orange-500/60 hover:bg-orange-500/10 group transition-all"
+                >
+                  <div class="flex items-center gap-3">
+                    <div class="w-9 h-9 rounded-lg bg-slate-800 flex items-center justify-center text-white text-lg group-hover:text-orange-400">
+                      <i class="fa-brands fa-github"></i>
+                    </div>
+                    <div>
+                      <p class="text-sm font-bold text-white group-hover:text-orange-300">GitHub</p>
+                      <p class="text-[11px] font-mono text-slate-400">github.com/sohelkhan</p>
+                    </div>
+                  </div>
+                  <i class="fa-solid fa-arrow-up-right-from-square text-xs text-slate-500 group-hover:text-orange-400"></i>
+                </a>
+
+                <!-- LinkedIn -->
+                <a
+                  href="https://linkedin.com/in/sohelkhan"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="flex items-center justify-between p-3.5 rounded-xl bg-slate-900/60 border border-slate-800 hover:border-cyan-500/60 hover:bg-cyan-500/10 group transition-all"
+                >
+                  <div class="flex items-center gap-3">
+                    <div class="w-9 h-9 rounded-lg bg-slate-800 flex items-center justify-center text-cyan-400 text-lg">
+                      <i class="fa-brands fa-linkedin-in"></i>
+                    </div>
+                    <div>
+                      <p class="text-sm font-bold text-white group-hover:text-cyan-300">LinkedIn</p>
+                      <p class="text-[11px] font-mono text-slate-400">linkedin.com/in/sohelkhan</p>
+                    </div>
+                  </div>
+                  <i class="fa-solid fa-arrow-up-right-from-square text-xs text-slate-500 group-hover:text-cyan-400"></i>
+                </a>
+
+                <!-- Instagram -->
+                <a
+                  href="https://instagram.com/sohelkhan"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="flex items-center justify-between p-3.5 rounded-xl bg-slate-900/60 border border-slate-800 hover:border-pink-500/60 hover:bg-pink-500/10 group transition-all"
+                >
+                  <div class="flex items-center gap-3">
+                    <div class="w-9 h-9 rounded-lg bg-slate-800 flex items-center justify-center text-pink-400 text-lg">
+                      <i class="fa-brands fa-instagram"></i>
+                    </div>
+                    <div>
+                      <p class="text-sm font-bold text-white group-hover:text-pink-300">Instagram</p>
+                      <p class="text-[11px] font-mono text-slate-400">instagram.com/sohelkhan</p>
+                    </div>
+                  </div>
+                  <i class="fa-solid fa-arrow-up-right-from-square text-xs text-slate-500 group-hover:text-pink-400"></i>
+                </a>
+
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ======================================================== -->
+    <!-- FOOTER -->
+    <!-- ======================================================== -->
+    <footer class="py-12 px-4 sm:px-6 lg:px-8 border-t border-slate-800/80 bg-[#03050a] relative">
+      <div class="max-w-6xl mx-auto flex flex-col items-center justify-center text-center space-y-6">
+        
+        <!-- Leaf Village / Will of Fire Visual Crest -->
+        <div class="w-12 h-12 rounded-xl bg-orange-500/10 border border-orange-500/30 flex items-center justify-center p-2 shadow-[0_0_20px_rgba(255,107,0,0.3)]">
+          <svg viewBox="0 0 100 100" class="w-full h-full spiral-glow" fill="none">
+            <path d="M50 20 C65 20 78 32 78 48 C78 64 64 78 48 78 C35 78 25 68 25 55 C25 44 33 36 43 36 C51 36 57 42 57 50 C57 55 53 59 48 59" stroke="#ffaa00" stroke-width="8" stroke-linecap="round"/>
+            <polygon points="75,30 90,24 81,41" fill="#ff2a2a"/>
+          </svg>
+        </div>
+
+        <!-- Footer Tagline (Requested: "Sohel Khan — Keep Moving Forward ⚡") -->
+        <div>
+          <h3 class="text-xl sm:text-2xl font-ninja font-extrabold text-white tracking-wide">
+            Sohel Khan — Keep Moving Forward ⚡
+          </h3>
+          <p class="text-xs font-kanji text-orange-400/90 mt-1">
+            火の意志 • The Will of Fire Lives in the Code
+          </p>
+        </div>
+
+        <!-- Quick Navigation Footer Links -->
+        <div class="flex flex-wrap justify-center gap-6 text-xs font-mono text-slate-400">
+          <a href="#about" class="hover:text-orange-400 transition-colors">About</a>
+          <a href="#education" class="hover:text-orange-400 transition-colors">Education</a>
+          <a href="#skills" class="hover:text-orange-400 transition-colors">Skills</a>
+          <a href="#journey" class="hover:text-orange-400 transition-colors">Ninja Journey</a>
+          <a href="#projects" class="hover:text-orange-400 transition-colors">Projects</a>
+          <a href="#hobbies" class="hover:text-orange-400 transition-colors">Hobbies</a>
+          <a href="#contact" class="hover:text-orange-400 transition-colors">Contact</a>
+        </div>
+
+        <!-- Copyright & Credit -->
+        <div class="pt-6 border-t border-slate-900 w-full text-xs font-mono text-slate-400">
+          <p>© 2026 Sohel Khan. Built with Passion, Chakra & Code. Ready for GitHub Pages deployment.</p>
+        </div>
+
+      </div>
+    </footer>
+
+    <!-- Back to top Kunai Button -->
+    <button
+      id="back-to-top"
+      class="fixed bottom-6 right-6 z-40 w-12 h-12 rounded-full bg-gradient-to-tr from-orange-600 to-red-600 text-white flex items-center justify-center shadow-[0_0_25px_rgba(255,107,0,0.6)] border border-amber-300 opacity-0 pointer-events-none translate-y-6 transition-all duration-300 hover:scale-110 focus:outline-none"
+      aria-label="Back to top"
+      title="Return to Leaf Village Summit"
+    >
+      <i class="fa-solid fa-arrow-up text-sm"></i>
+    </button>
+
+  </div>
+
+
+  <!-- ======================================================== -->
+  <!-- SHINOBI SCROLL SUCCESS MODAL -->
+  <!-- ======================================================== -->
+  <div id="scroll-success-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-300">
+    <div class="ninja-scroll-container max-w-md w-full p-8 text-center relative">
+      
+      <!-- Top Ninja Scroll Rollers Motif -->
+      <div class="w-16 h-16 mx-auto rounded-2xl bg-orange-500/20 border border-orange-500/50 flex items-center justify-center text-3xl text-orange-400 mb-4 shadow-[0_0_25px_rgba(255,107,0,0.5)]">
+        <i class="fa-solid fa-scroll"></i>
+      </div>
+
+      <span class="text-xs font-mono text-orange-400 uppercase tracking-widest block mb-1">
+        Scroll Dispatched!
+      </span>
+      <h3 class="font-ninja text-2xl font-bold text-white mb-2">Message Delivered</h3>
+      
+      <p class="text-xs sm:text-sm text-slate-300 leading-relaxed mb-4">
+        Thank you, <span id="modal-sender-name" class="font-bold text-amber-300">Shinobi</span>! Your ninja scroll has reached Sohel Khan's transmission network.
+      </p>
+      
+      <p class="text-xs text-slate-400 mb-6">
+        A response will be sent to <span id="modal-sender-email" class="font-mono text-orange-400">your email</span> soon.
+      </p>
+
+      <button
+        id="close-scroll-modal"
+        class="btn-chakra-primary w-full text-xs uppercase tracking-wider py-3"
+      >
+        <span>Acknowledge & Continue</span>
+      </button>
+
+    </div>
+  </div>
+
+  <!-- Interactive JavaScript Scripts -->
+  <script src="js/chakra-canvas.js"></script>
+  <script src="js/portfolio.js"></script>
+
+</body>
+</html>
